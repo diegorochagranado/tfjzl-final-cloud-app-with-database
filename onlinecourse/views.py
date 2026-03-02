@@ -138,7 +138,6 @@ def show_exam_result(request, course_id, submission_id):
         selected_choices = choices.filter(question=question)
         correct_choices = question.choice_set.filter(is_correct=True)
 
-        # Compare selected vs correct exactly
         if set(selected_choices) == set(correct_choices):
             total_score += 1
 
